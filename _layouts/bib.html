@@ -1,4 +1,5 @@
-@article{% raw %}{{% endraw %}{{page.id_key}},
+<!DOCTYPE html>
+<html><head></head><body><pre><code>@article{% raw %}{{% endraw %}{{page.id_key}},
     title     = "{{ page.title }}",
     author    = "{{ page.authors | join: " and "}}"{% if page.journal %},
     journal   = "{{ page.journal }}"{% endif %}{% if page.vol %},
@@ -7,4 +8,4 @@
     pages     = "{{ page.pages }}"{% endif %}{% if page.year %},
     year      = "{{ page.year }}"{% endif %}{% if page.pub %},
     publisher = "{{ page.pub }}"{% endif %}
-  {% raw %}}{% endraw %}
+  {% raw %}}{% endraw %}</code></pre></body></html>
