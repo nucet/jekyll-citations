@@ -1,0 +1,10 @@
+@article{% raw %}{{% endraw %}{{page.id_key}},
+    title     = "{{ page.title }}",
+    author    = "{{ page.authors | join: " and "}}"{% if page.journal %},
+    journal   = "{{ page.journal }}"{% endif %}{% if page.vol %},
+    volume    = "{{ page.vol }}"{% endif %}{% if page.num %},
+    number    = "{{ page.num }}"{% endif %}{% if page.pages %},
+    pages     = "{{ page.pages }}"{% endif %}{% if page.year %},
+    year      = "{{ page.year }}"{% endif %}{% if page.pub %},
+    publisher = "{{ page.pub }}"{% endif %}
+  {% raw %}}{% endraw %}

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+{%- assign theory = site.pages | where_exp: "item", "item.dir == '/'" | sort: 'url' | shift -%}
+{%- assign dt = site.pages | where_exp: "item", "item.url contains 'decision-theory'" | sort: 'url' -%}
+{%- assign gt = site.pages | where_exp: "item", "item.url contains 'game-theory'" | sort: 'url' -%}
+<h1>{{ site.title }}</h1>
+<nav class="sidenav">
+  <ul>
+    {%- for sitepage in theory -%}
+    <li>
+    {%- case sitepage.title -%}
+    {%- when "Decision Theory" -%}
+      {%- for sitepage in dt -%}
+      {%- if forloop.first == true -%}
+      <a href="{{ sitepage.url | absolute_url }}">{{ sitepage.title }}</a>
+      <ul>
+      {%- else -%}
+        <li>
+          <p><a href="{{ sitepage.url | absolute_url }}">{{ sitepage.title }}</a></p>
+        </li>
+      {%- endif -%}
+      {%- endfor -%}
+      </ul>
+    {%- when "Game Theory" -%}
+      {%- for sitepage in gt -%}
+      {%- if forloop.first == true -%}
+      <a href="{{ sitepage.url | absolute_url }}">{{ sitepage.title }}</a>
+      <ul>
+      {%- else -%}
+        <li>
+          <p><a href="{{ sitepage.url | absolute_url }}">{{ sitepage.title }}</a></p>
+        </li>
+      {%- endif -%}
+      {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <p><a href="{{ sitepage.url | absolute_url }}">{{ sitepage.title }}</a></p>
+    {%- endcase -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+<div class="content">
+    {{ content }}
+</div>

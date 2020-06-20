@@ -1,0 +1,18 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <title>{{ site.title }}</title>
+    <style>
+      {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
+      {{ scss_sheet | scssify }}
+    </style>
+  </head>
+  <body>
+    <main>
+    {{ content }}
+    </main>
+  </body>
+</html>
