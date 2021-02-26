@@ -41,4 +41,4 @@ I describe the steps below
 
 The [bib template](_layouts/bib.html) is more self explanatory. For each paper, it just dumps all of the information from the database into bib format.
 
-If you do not have access to this repository, you can email someone who committed recently. You should be able to find my email [on my GitHub profile](https://github.com/MattWThomas).
+If you do not have access to this repository, you can email someone who committed recently. You should be able to find my email [on my GitHub profile](https://github.com/mwt).

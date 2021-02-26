@@ -15,18 +15,20 @@
 # in the templates via {{ site.myvariable }}.
 title: Citations
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://cet.econ.northwestern.edu" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-plugins:
-  - pagemaster
 
 collections:
   papers:
     output: true
-    source: papers.yml
-    id_key: id_key
+
+defaults:
+- scope:
+    path: ''
+    type: papers
+  values:
     layout: bib
 
 sass:

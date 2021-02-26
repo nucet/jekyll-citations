@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "jekyll-citations"
   spec.version       = "1.0.0"
   spec.authors       = ["Matthew Thomas"]
-  spec.email         = ["mthomas@u.northwestern.edu"]
+  spec.email         = ["matthew.thomas@northwestern.edu"]
 
   spec.summary       = "A citation generator and organizer using jekyll."
   spec.homepage      = "https://github.com/nucet/jekyll-citations"
