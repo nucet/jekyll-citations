@@ -8,8 +8,8 @@ layout: default
 
 <p>
     <a href="{{ site.url }}{{ site.baseurl }}/pdf/{{ paper.pdf }}" target="_blank">{{ paper.title }}</a>
-    {% if paper.authors.size > 1 -%}
-        (with {{ paper.authors | where_exp:"item", "item != site.citations.author" | join: " and "}})
+    {%- if paper.authors.size > 1 -%}
+        {{ ' ' }}(with {{ paper.authors | where_exp:"item", "item != site.citations.author" | join: " and "}})
     {%- endif %},
     {% if paper.journal -%}
         <em>{{ paper.journal }}</em>,
