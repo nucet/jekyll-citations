@@ -4,4 +4,4 @@ _site
 Gemfile.lock
 vendor
 _papers
-
+*.gem
