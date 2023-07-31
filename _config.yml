@@ -45,4 +45,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - readme.md
+  - README.md

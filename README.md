@@ -27,8 +27,17 @@ I describe the steps below
     ```
 5. Run the specific HTML to be repeated in the list using variables from the [database](_data\papers.yml). It also checks to see if the paper is single authored and reacts accordingly.
     ```
-    <a href="{{ site.url }}{{ site.baseurl }}/pdf/{{ paper.pdf }}">{{ paper.title }}</a>{% if paper.authors.size > 1 %} (with {{ paper.authors | where_exp:"item", "item != 'Dekel, Eddie'" | join: " and "}}){% endif %}, <em>{{ paper.journal }}</em>, {{ paper.year }} <a href="{{ site.url }}{{ site.baseurl }}{{ paper.url }}">[bib]</a>
-    <hr />
+    <p>
+        <a href="{{ site.url }}{{ site.baseurl }}/pdf/{{ paper.pdf }}" target="_blank">{{ paper.title }}</a>
+        {% if paper.authors.size > 1 -%}
+            (with {{ paper.authors | where_exp:"item", "item != site.citations.author" | join: " and "}})
+        {%- endif %},
+        {% if paper.journal -%}
+            <em>{{ paper.journal }}</em>,
+        {%- endif %}
+        {{ paper.year }}
+        <a href="{{ paper.url | absolute_url }}" target="_blank">[bib]</a>
+    </p>
     ```
 6. Close all the if statements and the fir loop
     ```
