@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-citations"
-  spec.version       = "1.0.0"
+  spec.version       = "2.0.0"
   spec.authors       = ["Matthew Thomas"]
   spec.email         = ["matthew.thomas@northwestern.edu"]
 
